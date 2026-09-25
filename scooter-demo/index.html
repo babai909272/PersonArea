@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0d10">
+<title>Island Ride — Scooter Rental Demo</title>
+<style>
+:root{--bg:#0b0d10;--card:#12161c;--text:#f7f8fa;--muted:#b7bec8;--accent:#f6c453;--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box} html{scroll-behavior:smooth;scroll-snap-type:y proximity}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}
+.hero,.ride,.cta{min-height:100svh;scroll-snap-align:start;position:relative;display:flex;align-items:flex-end;overflow:hidden}
+.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.95) contrast(1.03)}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08) 10%,rgba(0,0,0,.18) 42%,rgba(0,0,0,.88) 100%)}
+.content{position:relative;z-index:2;width:min(100%,720px);margin:0 auto;padding:32px 22px calc(34px + env(safe-area-inset-bottom))}
+.badge{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(10,12,15,.48);backdrop-filter:blur(12px);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+h1,h2{margin:14px 0 10px;line-height:.95;letter-spacing:-.04em} h1{font-size:clamp(46px,13vw,86px)} h2{font-size:clamp(38px,10vw,66px)}
+p{margin:0 0 18px;color:#eef1f5;font-size:17px;line-height:1.5;max-width:560px}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 22px}.chip{padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.1);backdrop-filter:blur(10px);font-size:13px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 18px;border-radius:16px;background:var(--accent);color:#151515;font-weight:800;box-shadow:0 10px 30px rgba(0,0,0,.28);transition:transform .2s ease}
+.btn:active{transform:scale(.97)} .ghost{background:rgba(255,255,255,.12);color:white;border:1px solid var(--line);margin-left:8px}
+.top{position:fixed;z-index:10;top:0;left:0;right:0;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(180deg,rgba(0,0,0,.48),transparent);pointer-events:none}
+.brand{font-weight:900;letter-spacing:.08em}.count{font-size:12px;color:#fff;opacity:.8}
+.top>*{pointer-events:auto}
+.hero .content{padding-bottom:54px}.hero p{font-size:19px;color:white}
+.note{font-size:12px;color:var(--muted);margin-top:14px}
+.ride .content{animation:rise .7s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.cta{align-items:center;text-align:center;background:radial-gradient(circle at 50% 25%,#26334a 0,#11161e 36%,#0b0d10 72%)}
+.cta .content{padding-top:60px}.cta p{margin-left:auto;margin-right:auto;color:var(--muted)}
+.footer{margin-top:28px;font-size:11px;color:#7f8792;line-height:1.45}
+@media(min-width:760px){.content{padding-left:36px;padding-right:36px}.ride,.hero{min-height:92vh}}
+</style>
+</head>
+<body>
+<div class="top"><div class="brand">ISLAND RIDE</div><div class="count">Scooter rental demo</div></div>
+
+<section class="hero">
+  <img class="bg" src="https://images.pexels.com/photos/11111291/pexels-photo-11111291.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Scooter ride in Bali">
+  <div class="shade"></div>
+  <div class="content">
+    <span class="badge">Bali • Ride your own way</span>
+    <h1>Freedom starts with a key.</h1>
+    <p>Skip the schedules. Find hidden beaches, quiet roads and your own version of the island.</p>
+    <a class="btn" href="#ride1">Choose your ride ↓</a>
+    <div class="note">Demo landing page — mobile first, one link, one QR.</div>
+  </div>
+</section>
+
+<section class="ride" id="ride1">
+  <img class="bg" src="https://images.pexels.com/photos/10445567/pexels-photo-10445567.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Motorbike with surfboard in Bali">
+  <div class="shade"></div>
+  <div class="content">
+    <span class="badge">01 • Surf day</span>
+    <h2>Ride. Surf. Repeat.</h2>
+    <p>Perfect for a spontaneous beach run. Pack light, follow the sun and make the whole coast your plan.</p>
+    <div class="meta"><span class="chip">Easy city ride</span><span class="chip">Beach friendly</span><span class="chip">Helmet included*</span></div>
+    <a class="btn" href="#ride2">Next scooter</a>
+  </div>
+</section>
+
+<section class="ride" id="ride2">
+  <img class="bg" src="https://images.pexels.com/photos/2861918/pexels-photo-2861918.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Scooter on Bali street">
+  <div class="shade"></div>
+  <div class="content">
+    <span class="badge">02 • Local streets</span>
+    <h2>Move like the island moves.</h2>
+    <p>Small roads, morning coffee, sunset stops. A scooter turns the distance between places into part of the trip.</p>
+    <div class="meta"><span class="chip">Light & nimble</span><span class="chip">Daily rental</span><span class="chip">Local pickup*</span></div>
+    <a class="btn" href="#ride3">Keep exploring</a>
+  </div>
+</section>
+
+<section class="ride" id="ride3">
+  <img class="bg" src="https://images.pexels.com/photos/6027629/pexels-photo-6027629.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Scooter on scenic Bali road">
+  <div class="shade"></div>
+  <div class="content">
+    <span class="badge">03 • Adventure</span>
+    <h2>Take the road that looks interesting.</h2>
+    <p>No fixed route. No tour bus. Just enough freedom to stop when the view says: stay a little longer.</p>
+    <div class="meta"><span class="chip">Scenic routes</span><span class="chip">Flexible plans</span><span class="chip">Ask for delivery*</span></div>
+    <a class="btn" href="#ride4">Next</a>
+  </div>
+</section>
+
+<section class="ride" id="ride4">
+  <img class="bg" src="https://images.pexels.com/photos/33979107/pexels-photo-33979107.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Scooter passing Balinese architecture">
+  <div class="shade"></div>
+  <div class="content">
+    <span class="badge">04 • Bali rhythm</span>
+    <h2>Your day. Your pace.</h2>
+    <p>From temples to cafés, from busy streets to quiet corners — get there when you want, not when a timetable allows.</p>
+    <div class="meta"><span class="chip">Fast booking</span><span class="chip">Mobile friendly</span><span class="chip">WhatsApp ready*</span></div>
+    <a class="btn" href="#ride5">One more</a>
+  </div>
+</section>
+
+<section class="ride" id="ride5">
+  <img class="bg" src="https://images.unsplash.com/photo-1506127032361-59d904234169?auto=format&fit=crop&w=1600&q=82" alt="Scooter parking in Bali">
+  <div class="shade"></div>
+  <div class="content">
+    <span class="badge">05 • Pick your ride</span>
+    <h2>One island. Many ways to explore it.</h2>
+    <p>Choose the scooter that fits your day, scan the QR, and keep the booking process as simple as the ride itself.</p>
+    <div class="meta"><span class="chip">Multiple scooters</span><span class="chip">Quick pickup*</span><span class="chip">Simple booking*</span></div>
+    <a class="btn" href="#book">Book your ride</a>
+  </div>
+</section>
+
+<section class="cta" id="book">
+  <div class="content">
+    <span class="badge">Demo CTA</span>
+    <h2>Ready to ride?</h2>
+    <p>In a real version this button would open WhatsApp with a pre-filled message, show prices, location and availability.</p>
+    <a class="btn" href="#ride1">View scooters again</a>
+    <a class="btn ghost" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Top</a>
+    <div class="footer">
+      * Demo content only. No real rental offer, prices, availability or inclusions are claimed.<br>
+      Demo photos: Pexels / Unsplash. Built as a mobile landing-page experiment.
+    </div>
+  </div>
+</section>
+</body>
+</html>
