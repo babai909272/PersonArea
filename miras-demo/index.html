@@ -10,8 +10,8 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-snap-type:y proximity}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
 .top{position:fixed;z-index:20;inset:0 0 auto;padding:14px 17px;display:flex;justify-content:space-between;background:linear-gradient(#100d0acc,transparent);font-size:11px;letter-spacing:.13em}.top b{font-size:14px}
 .slide{min-height:100svh;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:flex-end;border-top:1px solid #ffffff0c}
-.photo{width:100%;height:62svh;min-height:430px;max-height:720px;background-image:url("./frames.webp?v=3");background-repeat:no-repeat;background-size:500% 100%;background-color:#22170f;overflow:hidden}.photo img{display:none}
-.p1{background-position:0 0}.p2{background-position:25% 0}.p3{background-position:50% 0}.p4{background-position:75% 0}.p5{background-position:100% 0}
+.photo{width:100%;height:62svh;min-height:430px;max-height:720px;background:#22170f;overflow:hidden;position:relative}.photo img{display:block;height:100%;width:500%;max-width:none;object-fit:fill;will-change:transform}
+.p1 img{transform:translateX(0)}.p2 img{transform:translateX(-20%)}.p3 img{transform:translateX(-40%)}.p4 img{transform:translateX(-60%)}.p5 img{transform:translateX(-80%)}
 .copy{padding:25px 22px 34px;background:linear-gradient(180deg,#17120e,#100d0a)}.eyebrow{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold)}
 h1,h2{margin:9px 0 10px;line-height:.98;letter-spacing:-.04em}h1{font-size:clamp(43px,12vw,72px)}h2{font-size:clamp(34px,9vw,58px)}
 p{margin:0;color:var(--muted);font-size:16px;line-height:1.5}.hero .copy{padding-bottom:44px}.hero p{font-size:18px;color:#e8e1d6}
@@ -26,7 +26,7 @@ p{margin:0;color:var(--muted);font-size:16px;line-height:1.5}.hero .copy{padding
 <div class="top"><b>MIRAS</b><span>ШКОЛА АРАБСКОГО</span></div>
 
 <section class="slide hero">
-  <div class="photo p3"><img src="./frames.webp?v=2" alt="Дорога среди скал" fetchpriority="high"></div>
+  <div class="photo p3"><img src="./frames.webp?v=4" alt="Дорога среди скал" fetchpriority="high"></div>
   <div class="copy r"><div class="eyebrow">MIRAS • язык в живом контексте</div>
     <h1>Арабский — не только учебник.</h1>
     <p>Язык начинает раскрываться по-настоящему, когда встречается с дорогой, людьми, разговором и смыслом.</p>
@@ -34,7 +34,7 @@ p{margin:0;color:var(--muted);font-size:16px;line-height:1.5}.hero .copy{padding
 </section>
 
 <section class="slide">
-  <div class="photo p1"><img src="./frames.webp?v=2" alt="Остановка в пути"></div>
+  <div class="photo p1"><img src="./frames.webp?v=4" alt="Остановка в пути"></div>
   <div class="copy r"><div class="eyebrow">01 • Остановка в пути</div>
     <h2>Простая сцена. Настоящий разговор.</h2>
     <p>Небольшая остановка среди скал превращается в спокойный разговор о поездке, возможностях и том, что человеку не всё подвластно.</p>
@@ -42,7 +42,7 @@ p{margin:0;color:var(--muted);font-size:16px;line-height:1.5}.hero .copy{padding
 </section>
 
 <section class="slide">
-  <div class="photo p2"><img src="./frames.webp?v=2" alt="Разговор в дороге"></div>
+  <div class="photo p2"><img src="./frames.webp?v=4" alt="Разговор в дороге"></div>
   <div class="copy r"><div class="eyebrow">02 • Живой контекст</div>
     <h2>Смысл рождается не в списке слов.</h2>
     <p>Когда язык связан с реальной ситуацией, слова перестают быть отдельными единицами и начинают работать как средство понимания.</p>
@@ -50,7 +50,7 @@ p{margin:0;color:var(--muted);font-size:16px;line-height:1.5}.hero .copy{padding
 </section>
 
 <section class="slide">
-  <div class="photo p4"><img src="./frames.webp?v=2" alt="Живой разговор"></div>
+  <div class="photo p4"><img src="./frames.webp?v=4" alt="Живой разговор"></div>
   <div class="copy r"><div class="eyebrow">03 • Размышление</div>
     <h2>От бытового — к важному.</h2>
     <p>Разговор естественно переходит от деталей дороги к благодарности и размышлению о милости Аллаха — без постановки и искусственного сценария.</p>
@@ -58,7 +58,7 @@ p{margin:0;color:var(--muted);font-size:16px;line-height:1.5}.hero .copy{padding
 </section>
 
 <section class="slide">
-  <div class="photo p5"><img src="./frames.webp?v=2" alt="Чай в дороге"></div>
+  <div class="photo p5"><img src="./frames.webp?v=4" alt="Чай в дороге"></div>
   <div class="copy r"><div class="eyebrow">04 • Язык вокруг нас</div>
     <h2>Понимать больше, чем перевод.</h2>
     <p>Цель обучения — не просто прочитать фразу, а постепенно слышать структуру речи, понимать смысл и пользоваться языком в реальной жизни.</p>
